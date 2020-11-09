@@ -1,0 +1,81 @@
+<%
+  var _default = json['default'];
+  for ( var key in _default ) {
+    if ( typeof page[key] === 'undefined' ) {
+      page[key] = _default[key];
+    }
+  }
+-%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="keywords" content="<%= page['keywords'] %>">
+  <meta name="description" content="<%= page['description'] %>">
+  <title><%= page['title'] %></title>
+
+  <link rel="alternate" hreflang="ja" href="<%= page['canonical'] %>">
+
+  <% if (page['bodyclass'] === 'thanks') { %>
+  <meta name="robots" content="noindex,nofollow">
+  <% } else { %>
+
+  <!-- ogp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<%= page['canonical'] %>">
+  <meta property="og:description" content="<%= page['description'] %>">
+  <meta property="og:image" content="">
+  <meta property="og:title" content="<%= page['title'] %>">
+  <meta property="og:site_name" content="">
+  <!-- /ogp -->
+  <% } %>
+
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body class="<%= page['bodyclass'] %>">
+  <div class="l-wrapper">
+
+    <header id="header" class="l-header">
+      <div class="header-top">
+        <!-- サイトアイコン　右側 -->
+        <h1 class="header-logo">
+          <a class="header-logo-icon" href="#">
+            <img src="/images/icon/Portfolio_1@3x.png" alt="STARTLINE">
+          </a>
+          <p class="header-logo-name">STARTLINE</p>
+        </h1>
+        <!-- ヘッダーnav -->
+        <div class="l-container">
+          <nav id="js-menu" class="globalnavi">
+            <ul class="gnavi-list">
+              <li class="gnav_about"><a href="/about/"><p class="underline">About</p><p>About</p></a></li>
+              <li class="gnav_hobby"><a href="/hobby/"><p class="underline">Hobby</p><p>趣味</p></a></li>
+              <li class="gnav_profile"><a href="/profile/"><p class="underline">Profile</p><p>プロフィール</p></a></li>
+              <li class="gnav_contact"><a href="/contact/"><p class="underline">Contact</p><p>お問い合わせ</p></a></li>
+            </ul>
+          </nav>
+
+          <div id="js-menuToggle" class="gnav-btn">
+            <div class="gnav-btn__container">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </header>
+
+    <div id="sns" class="l-sns">
+      <ul class="social">
+        <li class="instagram"><a class="social-btn" href="#"><img src="/images/icon/instagram.svg" alt=""></a></li>
+        <li class="facebook"><a class="social-btn" href="#"><img src="/images/icon/facebook.svg" alt=""></a></li>
+        <li class="twitter"><a class="social-btn" href="#"><img src="/images/icon/twitter.svg" alt=""></a></li>
+      </ul>
+    </div>
+
+  </div>

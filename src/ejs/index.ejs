@@ -1,0 +1,184 @@
+<%-
+  include('./common/_head', {
+    page: json['home']
+  });
+%>
+
+
+<!-- ここからコンテンツ -->
+<div id="main">
+  <div class="main-inner">
+    <!-- TOP イメージ -->
+    <div id="main-visual">
+        <div class="SPimg"><img src="/images/rich-tervet-q2GNdFmhxx4-unsplash.jpg" style="width: 100%;"alt=""></div>
+        <div class="PCimg"><img src="/images/rich-tervet-q2GNdFmhxx4-unsplash.jpg" style="width: 100%;"alt=""></div>
+    </div>
+
+    <!-- Serviceエリア -->
+    <section id="service">
+        <div class="ttl">
+          <p>SERVICE</p>
+        </div>
+        <!-- デザイン -->
+        <section class="work-design">
+          <div class="work-design-ttl">
+            <p class="lg-ttl">DESIGN</p>
+            <p class="sm-ttl">デザイン</p>
+          </div>
+          <div class="work-design-icon">
+            <img src="/images/icon/mouse@3x.png" alt="マウス">
+          </div>
+          <div class="work-design-des">
+            <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
+          </div>
+        </section>
+        <!-- コーディング -->
+        <section class="work-coding">
+          <div class="work-coding-ttl">
+            <p class="lg-ttl">CODING</p>
+            <p class="sm-ttl">コーディング</p>
+          </div>
+          <div class="work-coding-icon">
+            <img src="/images/icon/Enter@3x.png" alt="マウス">
+          </div>
+          <div class="work-coding-des">
+            <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
+          </div>
+        </section>
+    </section>
+
+    <!-- Workエリア -->
+    <section id="work">
+        <div class="ttl">
+          <p>WORK</p>
+        </div>
+        <!-- ポートフォリオ１ -->
+        <div class="portfolio">
+          <img src="/images/font/Poaner.png" alt="Poaner">
+          <div class="portfolio-ttl">
+            <p class="top-text">Poaner</p>
+            <p class="bottom-text">2020/05/20</p>
+          </div>
+        </div>
+        <!-- ポートフォリオ2 -->
+        <div class="portfolio">
+          <img src="/images/font/Poaner.png" alt="Poaner">
+          <div class="portfolio-ttl">
+            <p class="top-text">Poaner</p>
+            <p class="bottom-text">2020/05/20</p>
+          </div>
+        </div>
+        <!-- ポートフォリオ3 -->
+        <div class="portfolio">
+          <img src="/images/font/Poaner.png" alt="Poaner">
+          <div class="portfolio-ttl">
+            <p class="top-text">Poaner</p>
+            <p class="bottom-text">2020/05/20</p>
+          </div>
+        </div>
+        <!-- ポートフォリオ4 -->
+        <div class="portfolio">
+          <img src="/images/font/Poaner.png" alt="Poaner">
+          <div class="portfolio-ttl">
+            <p class="top-text">Poaner</p>
+            <p class="bottom-text">2020/05/20</p>
+          </div>
+        </div>
+        <!-- ポートフォリオ5 -->
+        <div class="portfolio">
+          <img src="/images/font/Poaner.png" alt="Poaner">
+          <div class="portfolio-ttl">
+            <p class="top-text">Poaner</p>
+            <p class="bottom-text">2020/05/20</p>
+          </div>
+        </div>
+        <!-- ポートフォリオ6 -->
+        <div class="portfolio">
+          <img src="/images/font/Poaner.png" alt="Poaner">
+          <div class="portfolio-ttl">
+            <p class="top-text">Poaner</p>
+            <p class="bottom-text">2020/05/20</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- Blogエリア -->
+    <section id="blog">
+      <div class="ttl">
+        <p>BLOG</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+
+
+<!-- 
+フォルダ構成は基本今のままでいく
+/theme/ 要検討
+
+/theme/_header.scss
+/theme/_footer.scss
+/theme/_layout.scss
+/theme/_glovalnavi.scss
+/theme/_structure.scss
+/theme/_ty.scss
+/theme/color.scss
+/theme/libs/_xxxxx.scss
+/theme/page/_各ページ.scss -->
+
+<!-- <div class="p-card p-card--with-thumbnail">
+  <div class="card-thumb"><img src="/images/aaa.jpg" alt=""></div>
+  <h2 class="title-aaaa"></h2>
+  <div class="c-btn"></div>
+</div> -->
+
+<!-- .l- Layoutレイヤー
+.c- Componentレイヤー
+.p- Projectレイヤー
+.u- Utilityレイヤー
+.is- クリックなどのイベントが発生している要素に付与する
+
+命名規則はBEM -->
+
+
+<!-- <div class="block block--modifier">
+  <div class="block-element block-element--modifier">
+    <div class="">
+
+    </div>
+  </div>
+</div> -->
+
+<!-- 
+.js- JavaScriptから参照される要素（スタイルは当てない）
+<p class="js-modal hogehoge is-open">OPEN <span> > </span></p>
+
+// .hogehoge {
+//   span {
+//     transition: ease 0.2s;
+//   }
+//   &.is-open {
+//     span {
+//       transform: rotate(-90deg);
+//     }
+//   }
+// }
+//
+// var
+//
+// const
+// let
+//
+//
+// function modal() {
+//   $('js-modal').on('click',function(){
+//
+//   });
+// } -->
+
+
+<!-- ここまでコンテンツ -->
+
+<% include common/_footer %>

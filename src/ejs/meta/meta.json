@@ -1,0 +1,18 @@
+{
+  "default": {
+    "bodyclass": "index",
+    "title": "STARTLINE",
+    "description": "株式会社FMC前田龍汰と申します。webコーディング、デザインの仕事をしています。",
+    "canonical": "#",
+    "keywords": "ポートフォリオ, Ryota Maeda, 前田龍汰, web制作"
+  },
+
+  "home": {
+    "bodyclass": "index",
+    "title": "STARTLINE",
+    "description": "株式会社FMC前田龍汰と申します。webコーディング、デザインの仕事をしています。",
+    "canonical": "#",
+    "keywords": "ポートフォリオ, Ryota Maeda, 前田龍汰, web制作"
+  }
+
+}

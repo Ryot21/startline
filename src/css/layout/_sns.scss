@@ -1,0 +1,33 @@
+.l-sns {
+    width: 100%;
+    background-color: $white;
+    margin: 0 auto;
+    transition: .3s;
+    @include min-screen($break_point_pc) {
+    width: 100%;
+    padding: 20px 40px;
+    }
+    .social {
+        display: flex;
+        justify-content: space-around;
+        width: 200px;
+        // text-align: center;
+        margin: 0 auto;
+        @include min-screen($break_point_pc) {
+            width: 180px;
+        }
+        .instagram, .facebook, .twitter {
+            line-height: 1;
+            width: 25px;
+            @include min-screen($break_point_pc) {
+                width: 30px;
+            }
+            // margin: 0 auto;
+            .social-btn {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
