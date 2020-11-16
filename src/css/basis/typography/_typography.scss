@@ -3,13 +3,13 @@ button,
 input,
 select,
 textarea {
-  // color: $color__text-main;
-  // font-family: $font__main;
-  font-size: 13px;
-  // line-height: $font__line-height-body;
+
+  font-family: $font__main;
+  font-size: 14px;
+  line-height: $font__line-height-body;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 2;
+  line-height: 1.4;
   @include min-screen($break_point_min) {
     font-size: 16px;
   }
@@ -37,7 +37,7 @@ address {
 }
 
 pre {
-  // background: $color__background-pre;
+
   font-family: $font__pre;
   @include font-size(0.9375);
   line-height: $font__line-height-pre;
@@ -53,12 +53,12 @@ code, kbd, tt, var {
 }
 
 abbr, acronym {
-  // border-bottom: 1px dotted $color__border-abbr;
+
   cursor: help;
 }
 
 mark, ins {
-  // background: $color__background-ins;
+
   text-decoration: none;
 }
 

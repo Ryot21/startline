@@ -1,29 +1,104 @@
+
+.PC {
+  @include max-screen($break_point_min) {
+    display: none;
+  }
+}
+.SP {
+    @include min-screen($break_point_min) {
+      display: none;
+  }
+}
+.l-out-shadow {
+  box-shadow: 5px 5px 4px -2px gray;
+}
+.l-in-shadow {
+  box-shadow: 2px 2px 4px -2px gray inset;
+}
+.underline {
+  border-bottom: 1px solid #000000;
+}
+
+// 共通のスタイル
+.l-container {
+  width: 100%;
+  padding: 30px 0;
+  margin: 100px auto;
+  background-color: $lightgray;
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: 2px 2px 4px 2px gray inset;
+  &:first-child {
+    margin: 30px auto;
+  }
+  @include min-screen($break_point_pc) {
+    margin: 150px auto;
+    &:first-child {
+      margin: 100px auto;
+    }
+  }
+}
 .l-wrapper {
   overflow: hidden;
   margin: 0 auto;
+  @include min-screen($break_point_pc) {
+
+  }
 }
-.l-header {
-
+.l-about {
+  width: 100%;
+  padding: 30px 0;
+  margin: 30px auto;
+  background-color: $lightgray;
+  text-align: center;
+  border-radius: 7px;
+  @include min-screen($break_point_min) {
+    // max-width: 1000px;
+    padding: 30px 0;
+  }
 }
 
 
-
-// .sec-content {
-// 	padding: 0 0 30px;
-// 	 @include min-screen($break_point_pc) {
-// 	  padding: 0 0 100px;
-// 	}
-
-
-// }
-
-// .l-container {
-//   margin: 0 auto;
-//   padding: 0 $content_padding_sp;
-//   @include clearfix;
+// .main-block {
+//   margin: 125px auto 50px;
 //   @include min-screen($break_point_pc) {
-//     padding: 0 $content_padding;
-//     width: $content_width;
+//     margin: 187px auto 100px;
 //   }
-
 // }
+
+// .l-main {
+//   border-bottom: 5px solid $red;
+//   margin-top: 25px;
+//   padding-bottom: 30px;
+//   @include min-screen($break_point_pc) {
+//     width: 680px;
+//     margin-top: 0;
+//     float: left;
+//     border-bottom: none;
+//   }
+// }
+
+.l-nav {
+  padding: 0 10px;
+}
+.l-sns {
+  width: 100%;
+  background-color: $white;
+  margin: 50px auto 0;
+  transition: .3s;
+  @include min-screen($break_point_min) {
+    margin: 50px auto 10px;
+  }
+  @include min-screen($break_point_pc) {
+  width: 100%;
+  padding: 20px 40px;
+  margin-top: 100px;
+  }
+}
+.l-blog {
+  background-color: $Dgray;
+  // height: 100px;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 30px 30px 0;
+}

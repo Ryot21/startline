@@ -4,139 +4,66 @@
 ==========================*/
 
 .l-header {
-  // position: fixed;
-  // top: 0px;
-  // left: 0px;
   width: 100%;
-  // z-index: 10000;
   background-color: #ffffff;
   height: 80px;
   padding: 10px;
   transition: .3s;
+  // タブレット
   @include min-screen($break_point_max) {
     height: 120px;
     padding: 20px 40px;
   }
-
-
+  // PC
   @include min-screen($break_point_pc) {
     height: 150px;
     max-width: $break_point_1440;
     padding: 20px 40px;
     margin: 0 auto;
   }
-/*=========================
- header pattern 1
-==========================*/
 
   .header-top {
+    // サイトアイコン　左側
+
     .header-logo {
       float: left;
       display: flex;
-
+      padding-top: 4px;
       &-icon {
         display: block;
+        display: flex;
         width: 40px;
         @include min-screen($break_point_pc) {
           width: 50px;
         }
-        img {
-          width: 100%;
-        }
-      }
-      &-name {
-        @include min-screen($break_point_pc) {
-          font-size: 30px;
-          line-height: 2.5;
-        }
-      }
-
-    }
-    .l-container {
-      // display: none;
-    }
-  
-    // TBの場合
-    @include min-screen($break_point_max) {
-      .header-logo {
-        float: left;
-        display: flex;
-
-        &-icon {
-          display: block;
-          width: 50px;
-          img {
-            width: 100%;
+        &-name {
+          line-height: 1.7;
+          // TB以上の場合
+          @include min-screen($break_point_max) {
+            font-size: $header_logo_fontsize;
+            line-height: 1.5;
+          }
+          @include min-screen($break_point_pc) {
+            line-height: 1.7;
           }
         }
-        &-name {
-          font-size: 30px;
-          line-height: 2.5;
-        }
-
-      }
-      .l-container {
-        float: right;
       }
     }
-
-    // PCの場合
-    @include min-screen($break_point_pc) {
-      .header-logo {
-        float: left;
-        display: flex;
-
-        &-icon {
-          display: block;
-          width: 50px;
-          img {
-            width: 100%;
-          }
-        }
-        &-name {
-          font-size: 30px;
-          line-height: 2.5;
-        }
-
+    .header-nav {
+      @include max-screen($break_point_min) {
+        display: none;
       }
-      .l-container {
+      @include min-screen($break_point_min) {
         float: right;
+        font-size: $header_nav_fontsize;
+        .gnavi-list {
+          display: flex;
+          text-align: center;
+        }
       }
     }
   }
-  // .l-container{
-  //   position: relative;
-  //   top: 5px;
-  //   z-index: 10;
-  //   width: 100% !important;
-  //   padding: 10px 0px;
-  //   @include min-screen($break_point_pc) {
-  //     background-color: $white;
-  //   }
-  //   @include max-screen($break_point_pc) {
-  //     padding: 0;
-  //     top: 30px;
-  //   }
-  // }
-
-  // &--fullsize {
-
-  // }
-
-
-/*=========================
- header pattern 2
-==========================*/
-  // &--1000pxのやつ {
-
-  // }
-
-/*=========================
- header pattern 3
-==========================*/
-  // &--ロゴが上にあるやつ {
-
-  // }
-
-
+}
+.header_nav_bottom {
+  font-size: $header_nav_bottom_fontsize;
 }

@@ -3,95 +3,90 @@ global-navigation button style
 ==========================*/
 
 .gnav-btn {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    vertical-align: middle;
-    position: fixed;
-    top: 16px;
-    right: 10px;
-    cursor: pointer;
-    @include min-screen($break_point_max) {
-      top: 35px;
-      right: 25px;
-    }
-    @include min-screen($break_point_pc) {
-      display: none;
-    }
-}
-  
-  .gnav-btn__container {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    display: inline-block;
-    @include min-screen($break_point_pc) {
-  
-    }
-  }
-  
-  
-  
-  .gnav-btn.close {
-    .gnav-txt--close {
-      display: inline-block;
-    }
-    .gnav-txt--menu {
-      display: none;
-    }
-  }
-  
-  .gnav-btn__container {
-    > span {
-      position: absolute;
-      width: 24px;
-      height: 2px;
-      left: 8px;
-      display: block;
-      background-color: $blue;
-      transition: all .4s;
-      border-radius: 10px;
-    }
-  }
-  
-  
-  .gnav-btn__container > span:first-child {
-    top: 9px;
-  }
-  
-  .gnav-btn__container > span:nth-child(2) {
-    top: 18px;
-  }
-  
-  .gnav-btn__container > span:nth-child(3) {
-    top: 28px;
-  }
-  
-  .close .gnav-btn__container > span:nth-of-type(1) {
-    top: 10px;
-    background-color: $white;
-    opacity: 0;
-  }
-  .close .gnav-btn__container > span:nth-of-type(2){
-    transform: rotate(-45deg);
-    top: 18px;
-  }
-  .close .gnav-btn__container > span:nth-of-type(3) {
-      transform: rotate(45deg);
-      top: 18px;
-  }
-  
-  .gnav-txt__close {
+  width: 30px;
+  height: 22px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 21px;
+  right: 15px;
+  cursor: pointer;
+  transition: ease 0.2s;
+  z-index: 50;
+  @include min-screen($break_point_min) {
     display: none;
   }
-  .menu-open {
-    .gnav-txt__close {
-      display: block;
-      color: $white;
-    }
-    .gnav-txt__open {
-      display: none;
-    }
+}
+
+
+.gnav-btn__container {
+  position: relative;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  display: inline-block;
+  @include min-screen($break_point_min) {
+
   }
-  
+  p {
+    padding-top: 25px;
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+.gnav-btn__container img {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  display: block;
+  transition: all .4s;
+}
+
+.gnav-btn__container img:first-child {
+  top: 1px;
+}
+
+.gnav-btn__container img:nth-child(2) {
+  top: 9px;
+}
+
+.gnav-btn__container img:nth-child(3) {
+   bottom:1px;
+}
+
+.close .gnav-btn__container img:nth-of-type(1) {
+  -webkit-transform: translateY(8px) rotate(-45deg);
+  transform: translateY(1px) rotate(-45deg);
+  // background-color: $cMenuClose;
+}
+.close .gnav-btn__container img:nth-of-type(2) {
+  left: 50%;
+  opacity: 0;
+  -webkit-animation: active-menu-bar02 .8s forwards;
+  animation: active-menu-bar02 .8s forwards;
+
+}
+
+// @-webkit-keyframes active-menu-bar02 {
+//   100% {
+//     height: 0;
+//   }
+// }
+// @keyframes active-menu-bar02 {
+//   100% {
+//     height: 0;
+//   }
+// }
+
+.close .gnav-btn__container img:nth-of-type(3) {
+  width: 100%;
+  -webkit-transform: translateY(-12px) rotate(45deg);
+  transform: translateY(-12px) rotate(45deg);
+}
+
+
+

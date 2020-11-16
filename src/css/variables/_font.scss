@@ -1,0 +1,45 @@
+
+// 共通
+h1,h2,h3,h4,p,a,span {
+    color: $Dgray;
+    font-family: 'Chalkboard SE',sans-serif;
+}
+
+
+// ヘッダー
+$header_logo_fontsize: 35px;
+$header_nav_fontsize: 28px;
+$header_nav_bottom_fontsize: 16px;
+$hamberger_nav_left_text: 20px;
+$hamberger_nav_right_text: 12px;
+$portfolio_title: 25px;
+$portfolio_day: 20px;
+$SP_title: 35px;
+$PC_title: 60px;
+$SP_blog_title: 25px;
+
+// TOPページ
+.main-font {
+    font-size: $SP_title;
+}
+
+.lg-ttl {
+    color: $Dgray;
+    font-size: 25px;
+    line-height: 1;
+}
+.sm-ttl {
+    color: $gray;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.top-text {
+    color: $white;
+    font-size: $portfolio_title;
+    line-height: 1.5;
+}
+.bottom-text {
+    color: $gray;
+    font-size: $portfolio_day;
+    line-height: 1.5;
+}

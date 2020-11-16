@@ -14,11 +14,322 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	// color: $black;
+	width: 100%;
+	color: $black;
 	border: none;
 	padding: 5px 5px;
-	// border: 1px solid $black;
+	border: 1px solid #c5c1c1;
+
 	&:focus {
-		// color: $color__text-input-focus;
+
+		outline: 2px solid $blue;
+	}
+	@include min-screen($break_point_min) {
+		padding: 5px 10px;
 	}
 }
+
+textarea,
+input {
+	&::placeholder {
+	  color: $gray;
+	}
+}
+
+
+
+.search-block {
+	position: relative;
+	@include min-screen($break_point_pc) {
+		font-size: 14px;
+	}
+	i {
+		position: absolute;
+		top: 12px;
+		left: 12px;
+		font-size: 12px;
+		color: $gray;
+		@include min-screen($break_point_pc) {
+			font-size: 14px;
+		}
+	}
+	.search-input {
+		height: 36px;
+	  border-radius: 30px;
+	  padding-left: 25px;
+	  padding-right: 15px;
+		@include min-screen($break_point_pc) {
+			padding: 4px 5px 6px 30px;
+			font-size: 14px;
+		}
+		&:focus {
+			outline: 0;
+		}
+
+
+	}
+
+
+}
+
+
+
+// select {
+// 	border: 2px solid $gold;
+// 	height: 37px;
+// 	width: 100%;
+// 	@include min-screen($break_point_min) {
+//     width: 290px;
+//   }
+// }
+
+textarea {
+	width: 100%;
+	height: 239px;
+	resize: vertical;
+  @include min-screen($break_point_min) {
+    width: 100%;
+    height: 294px;
+  }
+	&.textarea-min {
+		height: 100px;
+		@include min-screen($break_point_min) {
+	    height: 230px;
+	  }
+	}
+}
+
+input {
+	display: block;
+	width: 100%;
+	&.input__min {
+		@include min-screen($break_point_min) {
+	    width: 290px;
+	  }
+	}
+
+	&.middle-width {
+		@include min-screen($break_point_min) {
+	    width: 325px;
+	  }
+	}
+
+	&.full-width {
+		@include min-screen($break_point_min) {
+	    width: 100%;
+	  }
+	}
+
+	&.full-width--670 {
+		@include min-screen($break_point_min) {
+	    width: 670px;
+	  }
+	}
+}
+
+.input-birth input[type="text"]  {
+  @include min-screen($break_point_min) {
+    float: inherit;
+  }
+}
+
+input.input-year {
+    width: 30%;
+    display: inline-block;
+    margin-right: 10px;
+    @include min-screen($break_point_min) {
+      width: 113px;
+    }
+}
+input.input-month {
+    width: 15%;
+    display: inline-block;
+    margin: 0 10px;
+    @include min-screen($break_point_min) {
+      width: 52px;
+    }
+}
+input.input-day {
+    width: 15%;
+    display: inline-block;
+    margin: 0 10px;
+    @include min-screen($break_point_min) {
+      width: 52px;
+    }
+}
+
+.radio-input{
+  opacity: 0;
+	display: none;
+}
+.radio-input + label{
+  padding-left: 20px;
+  position:relative;
+  margin-right: 10px;
+}
+.radio-input + label::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+}
+.radio-input:checked + label::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+input[type="text"].input--inline {
+	@include min-screen($break_point_min) {
+		display: inline-block;
+		width: 90%;
+	}
+}
+
+
+/* ----------------
+ラジオボタン
+-----------------*/
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio {
+  padding-left: 20px;
+  position: relative;
+}
+
+.radio:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $gray;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + .radio:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 11px;
+  height: 11px;
+  background: $blue;
+  border-radius: 50%;
+}
+
+/* ----------------
+チェックボックス
+-----------------*/
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox {
+  padding-left: 20px;
+  position:relative;
+  // margin-right: 20px;
+}
+
+.checkbox:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + .checkbox:after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  transform: rotate(40deg);
+  border-bottom: 3px solid $blue;
+  border-right: 3px solid $blue;
+}
+
+
+.form-check-list {
+	@include min-screen($break_point_min) {
+		padding: 7px 0;
+	}
+	> li {
+		display: inline-block;
+		margin-right: 5px;
+		@include min-screen($break_point_min) {
+			margin-right: 10px;
+		}
+	}
+}
+
+.single-article {
+	.post-section {
+		.mktoForm {
+			input[type=text],
+			input[type=url],
+			input[type=email],
+			input[type=tel],
+			input[type=number],
+			input[type=date],
+			input[type=text],
+			input[type=url],
+			input[type=email],
+			input[type=tel],
+			input[type=number],
+			input[type=date],
+			textarea.mktoField,
+			select.mktoField {
+				padding: 5px;
+				font-size: 14px;
+				height: auto;
+			}
+			select.mktoField {
+				padding: 5px 5px;
+			}
+		}
+		.mktoFieldDescriptor {
+			margin-bottom: 15px;
+		}
+
+		.mktoLabel {
+			margin-bottom: 10px;
+			@include min-screen($break_point_min) {
+				margin-bottom: 0;
+			}
+		}
+
+		.mktoButton {
+			font-weight: bold !important;
+		}
+	}
+}
+
+
+
+
+/* カスタム CSS を下に追加 */

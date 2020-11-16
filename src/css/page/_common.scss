@@ -1,0 +1,30 @@
+/*=========================
+common lower pages settings
+==========================*/
+.sec-content__relation {
+
+  .relation-list {
+    @include min-screen($break_point_min) {
+      @include flexbox;
+    }
+    &::after {
+      @include min-screen($break_point_pc) {
+        width: calc(33.33333% - 10px);
+        content: "";
+        display: block;
+      }
+    }
+    > li {
+      margin-bottom: 20px;
+      @include min-screen($break_point_min) {
+        width: calc(50% - 10px);
+      }
+      @include min-screen($break_point_pc) {
+        width: calc(33.33333% - 10px);
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

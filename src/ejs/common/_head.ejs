@@ -32,50 +32,75 @@
   <meta property="og:site_name" content="">
   <!-- /ogp -->
   <% } %>
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <!-- js/先に使いたい機能を上に持ってくる、defer=読み込み順を確定させる -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body class="<%= page['bodyclass'] %>">
   <div class="l-wrapper">
-
     <header id="header" class="l-header">
       <div class="header-top">
         <!-- サイトアイコン　右側 -->
         <h1 class="header-logo">
-          <a class="header-logo-icon" href="#">
+          <a class="header-logo-icon" href="/">
             <img src="/images/icon/Portfolio_1@3x.png" alt="STARTLINE">
+            <span class="header-logo-icon-name">STARTLINE</span>
           </a>
-          <p class="header-logo-name">STARTLINE</p>
         </h1>
         <!-- ヘッダーnav -->
-        <div class="l-container">
-          <nav id="js-menu" class="globalnavi">
+        <div class="header-nav">
+          <nav class="globalnavi">
             <ul class="gnavi-list">
-              <li class="gnav_about"><a href="/about/"><p class="underline">About</p><p>About</p></a></li>
-              <li class="gnav_hobby"><a href="/hobby/"><p class="underline">Hobby</p><p>趣味</p></a></li>
-              <li class="gnav_profile"><a href="/profile/"><p class="underline">Profile</p><p>プロフィール</p></a></li>
-              <li class="gnav_contact"><a href="/contact/"><p class="underline">Contact</p><p>お問い合わせ</p></a></li>
+              <li class="gnav_about l-nav"><a href="/about/"><p class="underline">About</p><p class="header_nav_bottom u-c-lightgray">About</p></a></li>
+              <li class="gnav_hobby l-nav"><a href="/hobby/"><p class="underline">Hobby</p><p class="header_nav_bottom u-c-lightgray">趣味</p></a></li>
+              <li class="gnav_profile l-nav"><a href="/blog/"><p class="underline">Blog</p><p class="header_nav_bottom u-c-lightgray">ブログ</p></a></li>
+              <li class="gnav_contact l-nav"><a href="/contact/"><p class="underline">Contact</p><p class="header_nav_bottom u-c-lightgray">お問い合わせ</p></a></li>
             </ul>
           </nav>
-
-          <div id="js-menuToggle" class="gnav-btn">
-            <div class="gnav-btn__container">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-  
         </div>
+        <!--ハンバーガーメニュー -->
+        <div id="js-menuToggle" class="gnav-btn">
+          <div class="gnav-btn__container">
+            <img src="/images/common/hamburger/h_menu1@3x.png" alt="ハンバーガーメニュー">
+            <img src="/images/common/hamburger/h_menu2@3x.png" alt="ハンバーガーメニュー">
+            <img src="/images/common/hamburger/h_menu3@3x.png" alt="ハンバーガーメニュー">
+            <p>MENU</p>
+          </div>
+        </div>
+        <!-- モバイルメニュー -->
+        <nav class="mobile-menu">
+          <h2 class="mobile-menu__ttl">menu</h2>
+          <ul class="mobile-menu__main">
+              <li class="mobile-menu__item">
+                  <a class="mobile-menu__link" href="/about/">
+                      <span class="en-title">About</span>
+                      <span class="ja-title">私について</span>
+                  </a>
+              </li>
+              <li class="mobile-menu__item">
+                  <a class="mobile-menu__link" href="/hobby/">
+                      <span class="en-title">Hobby</span>
+                      <span class="ja-title">趣味</span>
+                  </a>
+              </li>
+              <li class="mobile-menu__item">
+                  <a class="mobile-menu__link" href="/blog/">
+                      <span class="en-title">Blog</span>
+                      <span class="ja-title">ブログ</span>
+                  </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="en-title">Contact</span>
+                    <span class="ja-title">お問い合わせ</span>
+                </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
-
-    <div id="sns" class="l-sns">
-      <ul class="social">
-        <li class="instagram"><a class="social-btn" href="#"><img src="/images/icon/instagram.svg" alt=""></a></li>
-        <li class="facebook"><a class="social-btn" href="#"><img src="/images/icon/facebook.svg" alt=""></a></li>
-        <li class="twitter"><a class="social-btn" href="#"><img src="/images/icon/twitter.svg" alt=""></a></li>
-      </ul>
-    </div>
-
   </div>
+</body>

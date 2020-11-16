@@ -1,0 +1,38 @@
+
+.c-table {
+  @include min-screen($break_point_min) {
+    display: table;
+    width: 100%;
+  }
+  .c-table__row {
+    margin-top: 20px;
+    letter-spacing: 0;
+    @include min-screen($break_point_min) {
+      display: table-row;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+    dt {
+      padding: 10px;
+      // background-color: $lightgray;
+      font-weight: bold;
+      @include min-screen($break_point_min) {
+        width: 220px;
+        padding: 20px;
+        border-bottom: 1px solid $white;
+        display: table-cell;
+      }
+    }
+    dd {
+      position: relative;
+      padding: 10px;
+      @include min-screen($break_point_min) {
+        display: table-cell;
+        padding: 20px 20px 20px 30px;
+        text-align: left;
+      }
+
+    }
+  }
+}

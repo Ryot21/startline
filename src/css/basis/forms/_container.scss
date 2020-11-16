@@ -1,0 +1,47 @@
+
+.c-form {
+	margin-top: 20px;
+	@include min-screen($break_point_min) {
+		margin-top: 40px;
+	}
+	.form-table {
+		@include min-screen($break_point_min) {
+	    display: table;
+			width: 100%;
+	  }
+		dl {
+			margin-bottom: 20px;
+			@include min-screen($break_point_min) {
+		    display: table-row;
+		  }
+			dt {
+				margin-bottom: 5px;
+				padding: 10px;
+				background-color: $lightgray;
+				font-weight: bold;
+				@include min-screen($break_point_min) {
+			    display: table-cell;
+					width: 255px;
+					margin: 0;
+					padding: 30px 20px;
+					vertical-align: top;
+					border-bottom: 1px solid $white;
+			  }
+			}
+			dd {
+				padding: 10px 5px;
+				@include min-screen($break_point_min) {
+			    display: table-cell;
+					padding: 25px;
+					border-bottom: 1px solid $lightgray;
+			  }
+			}
+		}
+	}
+	.c-btn {
+		margin-top: 20px;
+		@include min-screen($break_point_min) {
+			margin-top: 40px;
+		}
+	}
+}

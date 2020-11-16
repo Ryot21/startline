@@ -1,3 +1,6 @@
+
+// 基準設定
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -8,6 +11,10 @@ body {
 	margin: 0;
 	letter-spacing: 0.05em;
 }
+a {
+	text-decoration: none;
+}
+
 
 article,
 aside,
@@ -96,6 +103,7 @@ sub {
 
 img {
 	border: 0;
+	width: 100%;
 }
 
 svg:not(:root) {

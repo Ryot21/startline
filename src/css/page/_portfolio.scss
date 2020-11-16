@@ -1,0 +1,159 @@
+
+#main {
+    width: 100%;
+    background-color: $white;
+    .main-inner {
+        margin: 0 auto;
+        padding: 0 20px;
+        // background-color: $lightgray;
+        padding-top: 30px;
+        @include min-screen($break_point_max) {
+            max-width: 1200px;
+        }
+    }
+}
+
+// PC用フォントサイズ
+.main-font {
+    @include min-screen($break_point_min) {
+        font-size: $PC_title;
+    }
+}
+
+    //  TOP イメージ 
+    #main-visual {
+        // height: 500px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        // object-fit: cover;
+        .SP {
+            @include min-screen($break_point_min) {
+                display: none;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .PC {
+            @include max-screen($break_point_max) {
+                display: none;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .ttl{
+        text-shadow: 3px 3px 2px silver;
+    }
+
+    // Service,Work,Blog 共通エリア
+    .l-container {
+        .ttl {
+            margin-top: -60px;
+            text-align: start;
+            padding-left: 20px;
+            @include min-screen($break_point_min) {
+                margin-top: -80px;
+                text-align: center;
+                padding-left: 0;
+            }
+            @include min-screen($break_point_pc) {
+                
+            }
+            p {
+                text-align: left;
+                @include min-screen($break_point_min) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    // Serviceエリア
+    #service {
+        .work-design, .work-coding {
+            
+            text-align: center;
+            padding: 20px;
+            background-color: $white;
+            border-radius: 7px;
+            margin: 20px;
+            @include min-screen($break_point_min) {
+                display: inline-block;
+                width: 40%;
+            }
+            @include min-screen($break_point_pc) {
+                width: 400px;
+            }
+            &-icon {
+                width: 100%;
+                img {
+                    width: 150px;
+                    margin: 0 auto;
+                }
+            }
+            .work-design-icon {
+                img {
+                    width: 120px;
+                    padding-top: 10px;
+                    padding-bottom: 20px;
+                }
+            }
+            &-des {
+                width: 100%;
+            }
+        }
+    }
+
+    // Workエリア
+    #work {
+        padding-left: 10px;
+        padding-right: 10px;
+        .portfolio {
+            display: inline-block;
+            color: $white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 7px;
+            background-color: $Dgray;
+            transition: all 0.5s;
+            border: 4px solid rgba(164, 164, 164, 0.149);
+            @include min-screen($break_point_max) {
+                margin-top: 30px;
+                width: 300px;
+                height: 255px;
+                margin: 30px 10px 0;
+            }
+            @include min-screen($break_point_pc) {
+                margin-top: 30px;
+                width: 340px;
+                height: 255px;
+            }
+            &-ttl {
+                position: relative;
+                &:after {
+                    position:absolute;
+                    top:25px;
+                    right:10px;
+                    content: '';
+                    width: 25px;
+                    height: 25px;
+                    background-image: url(../images/icon/seo.png);
+                    background-size: contain;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                transform: translateY(4px);
+                border-bottom: none;
+                border-bottom: 2px solid $black;
+                cursor: pointer;
+            }
+        }
+        .PC {
+            @include max-screen($break_point_min) {
+                display: none;
+            }
+        }
+    }

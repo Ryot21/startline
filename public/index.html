@@ -22,245 +22,294 @@
   <meta property="og:site_name" content="">
   <!-- /ogp -->
   
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <!-- js/先に使いたい機能を上に持ってくる、defer=読み込み順を確定させる -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
-<body class="index">
+<body class="portfolio">
   <div class="l-wrapper">
-
     <header id="header" class="l-header">
       <div class="header-top">
         <!-- サイトアイコン　右側 -->
         <h1 class="header-logo">
-          <a class="header-logo-icon" href="#">
+          <a class="header-logo-icon" href="/">
             <img src="/images/icon/Portfolio_1@3x.png" alt="STARTLINE">
+            <span class="header-logo-icon-name">STARTLINE</span>
           </a>
-          <p class="header-logo-name">STARTLINE</p>
         </h1>
         <!-- ヘッダーnav -->
-        <div class="l-container">
-          <nav id="js-menu" class="globalnavi">
+        <div class="header-nav">
+          <nav class="globalnavi">
             <ul class="gnavi-list">
-              <li class="gnav_about"><a href="/about/"><p class="underline">About</p><p>About</p></a></li>
-              <li class="gnav_hobby"><a href="/hobby/"><p class="underline">Hobby</p><p>趣味</p></a></li>
-              <li class="gnav_profile"><a href="/profile/"><p class="underline">Profile</p><p>プロフィール</p></a></li>
-              <li class="gnav_contact"><a href="/contact/"><p class="underline">Contact</p><p>お問い合わせ</p></a></li>
+              <li class="gnav_about l-nav"><a href="/about/"><p class="underline">About</p><p class="header_nav_bottom u-c-lightgray">About</p></a></li>
+              <li class="gnav_hobby l-nav"><a href="/hobby/"><p class="underline">Hobby</p><p class="header_nav_bottom u-c-lightgray">趣味</p></a></li>
+              <li class="gnav_profile l-nav"><a href="/blog/"><p class="underline">Blog</p><p class="header_nav_bottom u-c-lightgray">ブログ</p></a></li>
+              <li class="gnav_contact l-nav"><a href="/contact/"><p class="underline">Contact</p><p class="header_nav_bottom u-c-lightgray">お問い合わせ</p></a></li>
             </ul>
           </nav>
-
-          <div id="js-menuToggle" class="gnav-btn">
-            <div class="gnav-btn__container">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-  
         </div>
+        <!--ハンバーガーメニュー -->
+        <div id="js-menuToggle" class="gnav-btn">
+          <div class="gnav-btn__container">
+            <img src="/images/common/hamburger/h_menu1@3x.png" alt="ハンバーガーメニュー">
+            <img src="/images/common/hamburger/h_menu2@3x.png" alt="ハンバーガーメニュー">
+            <img src="/images/common/hamburger/h_menu3@3x.png" alt="ハンバーガーメニュー">
+            <p>MENU</p>
+          </div>
+        </div>
+        <!-- モバイルメニュー -->
+        <nav class="mobile-menu">
+          <h2 class="mobile-menu__ttl">menu</h2>
+          <ul class="mobile-menu__main">
+              <li class="mobile-menu__item">
+                  <a class="mobile-menu__link" href="/about/">
+                      <span class="en-title">About</span>
+                      <span class="ja-title">私について</span>
+                  </a>
+              </li>
+              <li class="mobile-menu__item">
+                  <a class="mobile-menu__link" href="/hobby/">
+                      <span class="en-title">Hobby</span>
+                      <span class="ja-title">趣味</span>
+                  </a>
+              </li>
+              <li class="mobile-menu__item">
+                  <a class="mobile-menu__link" href="/blog/">
+                      <span class="en-title">Blog</span>
+                      <span class="ja-title">ブログ</span>
+                  </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                    <span class="en-title">Contact</span>
+                    <span class="ja-title">お問い合わせ</span>
+                </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
+  </div>
+</body>
 
-    <div id="sns" class="l-sns">
-      <ul class="social">
-        <li class="instagram"><a class="social-btn" href="#"><img src="/images/icon/instagram.svg" alt=""></a></li>
-        <li class="facebook"><a class="social-btn" href="#"><img src="/images/icon/facebook.svg" alt=""></a></li>
-        <li class="twitter"><a class="social-btn" href="#"><img src="/images/icon/twitter.svg" alt=""></a></li>
-      </ul>
-    </div>
 
+  <!-- TOP イメージ -->
+<div id="container">
+  <div id="main-visual">
+      <div class="SP"><img src="/images/rich-tervet-q2GNdFmhxx4-unsplash.jpg" alt="スタートラインのTOP写真"></div>
+      <div class="PC"><img src="/images/rich-tervet-q2GNdFmhxx4-unsplash.jpg" alt="スタートラインのTOP写真"></div>
+  </div>
+  <!-- SNS -->
+  <div id="sns" class="l-sns">
+    <ul class="social">
+      <li class="instagram icon"><a class="social-btn" href="#"><img src="/images/icon/instagram.svg" alt="インスタグラム"></a></li>
+      <li class="facebook icon"><a class="social-btn" href="#"><img src="/images/icon/facebook.svg" alt="フェイスブック"></a></li>
+      <li class="twitter icon"><a class="social-btn" href="#"><img src="/images/icon/twitter.svg" alt="ツイッター"></a></li>
+    </ul>
   </div>
 
-
-
-<!-- ここからコンテンツ -->
-<div id="main">
-  <div class="main-inner">
-    <!-- TOP イメージ -->
-    <div id="main-visual">
-        <div class="SPimg"><img src="/images/rich-tervet-q2GNdFmhxx4-unsplash.jpg" style="width: 100%;"alt=""></div>
-        <div class="PCimg"><img src="/images/rich-tervet-q2GNdFmhxx4-unsplash.jpg" style="width: 100%;"alt=""></div>
-    </div>
-
-    <!-- Serviceエリア -->
-    <section id="service">
-        <div class="ttl">
-          <p>SERVICE</p>
-        </div>
-        <!-- デザイン -->
-        <section class="work-design">
-          <div class="work-design-ttl">
-            <p class="lg-ttl">DESIGN</p>
-            <p class="sm-ttl">デザイン</p>
+  <!-- ここからコンテンツ -->
+  <div id="main">
+    <div class="main-inner">
+  <!-- Serviceエリア -->
+      <section id="service" class="l-container">
+          <h2 class="ttl main-font">SERVICE</h2>
+          <!-- デザイン -->
+          <section class="work-design l-out-shadow">
+            <h3 class="work-design-ttl">
+              <p class="lg-ttl">DESIGN</p>
+              <p class="sm-ttl">デザイン</p>
+            </h3>
+            <div class="work-design-icon">
+              <img src="/images/icon/mouse@3x.png" alt="マウス">
+            </div>
+            <div class="work-design-des">
+              <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
+            </div>
+          </section>
+          <!-- コーディング -->
+          <section class="work-coding l-out-shadow">
+            <h3 class="work-coding-ttl">
+              <p class="lg-ttl">CODING</p>
+              <p class="sm-ttl">コーディング</p>
+            </h3>
+            <div class="work-coding-icon">
+              <img src="/images/icon/Enter@3x.png" alt="マウス">
+            </div>
+            <div class="work-coding-des">
+              <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
+            </div>
+          </section>
+      </section>
+  <!-- Workエリア -->
+      <section id="work" class="l-container main-font">
+          <h2 class="ttl main-font">WORK</h2>
+          <!-- ポートフォリオ１ -->
+          <div class="portfolio l-out-shadow">
+            <img src="/images/portfolio/Poaner.png" alt="Poaner">
+            <div class="portfolio-ttl">
+              <p class="top-text">Poaner</p>
+              <p class="bottom-text">2020/05/20</p>
+            </div>
           </div>
-          <div class="work-design-icon">
-            <img src="/images/icon/mouse@3x.png" alt="マウス">
+          <!-- ポートフォリオ2 -->
+          <div class="portfolio l-out-shadow">
+            <img src="/images/portfolio/Poaner.png" alt="Poaner">
+            <div class="portfolio-ttl">
+              <p class="top-text">Poaner</p>
+              <p class="bottom-text">2020/05/20</p>
+            </div>
           </div>
-          <div class="work-design-des">
-            <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
+          <!-- ポートフォリオ3 -->
+          <div class="portfolio l-out-shadow">
+            <img src="/images/portfolio/Poaner.png" alt="Poaner">
+            <div class="portfolio-ttl">
+              <p class="top-text">Poaner</p>
+              <p class="bottom-text">2020/05/20</p>
+            </div>
           </div>
-        </section>
-        <!-- コーディング -->
-        <section class="work-coding">
-          <div class="work-coding-ttl">
-            <p class="lg-ttl">CODING</p>
-            <p class="sm-ttl">コーディング</p>
+          <!-- ポートフォリオ4 -->
+          <div class="portfolio l-out-shadow PC">
+            <img src="/images/portfolio/Poaner.png" class="PC" alt="Poaner">
+            <div class="portfolio-ttl">
+              <p class="top-text">Poaner</p>
+              <p class="bottom-text">2020/05/20</p>
+            </div>
           </div>
-          <div class="work-coding-icon">
-            <img src="/images/icon/Enter@3x.png" alt="マウス">
+          <!-- ポートフォリオ5 -->
+          <div class="portfolio l-out-shadow PC">
+            <img src="/images/portfolio/Poaner.png" class="PC" alt="Poaner">
+            <div class="portfolio-ttl">
+              <p class="top-text">Poaner</p>
+              <p class="bottom-text">2020/05/20</p>
+            </div>
           </div>
-          <div class="work-coding-des">
-            <p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
+          <!-- ポートフォリオ6 -->
+          <div class="portfolio l-out-shadow PC">
+            <img src="/images/portfolio/Poaner.png" class="PC" alt="Poaner">
+            <div class="portfolio-ttl">
+              <p class="top-text">Poaner</p>
+              <p class="bottom-text">2020/05/20</p>
+            </div>
           </div>
-        </section>
-    </section>
-
-    <!-- Workエリア -->
-    <section id="work">
-        <div class="ttl">
-          <p>WORK</p>
-        </div>
-        <!-- ポートフォリオ１ -->
-        <div class="portfolio">
-          <img src="/images/font/Poaner.png" alt="Poaner">
-          <div class="portfolio-ttl">
-            <p class="top-text">Poaner</p>
-            <p class="bottom-text">2020/05/20</p>
-          </div>
-        </div>
-        <!-- ポートフォリオ2 -->
-        <div class="portfolio">
-          <img src="/images/font/Poaner.png" alt="Poaner">
-          <div class="portfolio-ttl">
-            <p class="top-text">Poaner</p>
-            <p class="bottom-text">2020/05/20</p>
-          </div>
-        </div>
-        <!-- ポートフォリオ3 -->
-        <div class="portfolio">
-          <img src="/images/font/Poaner.png" alt="Poaner">
-          <div class="portfolio-ttl">
-            <p class="top-text">Poaner</p>
-            <p class="bottom-text">2020/05/20</p>
-          </div>
-        </div>
-        <!-- ポートフォリオ4 -->
-        <div class="portfolio">
-          <img src="/images/font/Poaner.png" alt="Poaner">
-          <div class="portfolio-ttl">
-            <p class="top-text">Poaner</p>
-            <p class="bottom-text">2020/05/20</p>
-          </div>
-        </div>
-        <!-- ポートフォリオ5 -->
-        <div class="portfolio">
-          <img src="/images/font/Poaner.png" alt="Poaner">
-          <div class="portfolio-ttl">
-            <p class="top-text">Poaner</p>
-            <p class="bottom-text">2020/05/20</p>
-          </div>
-        </div>
-        <!-- ポートフォリオ6 -->
-        <div class="portfolio">
-          <img src="/images/font/Poaner.png" alt="Poaner">
-          <div class="portfolio-ttl">
-            <p class="top-text">Poaner</p>
-            <p class="bottom-text">2020/05/20</p>
-          </div>
-        </div>
-    </section>
-
-    <!-- Blogエリア -->
-    <section id="blog">
-      <div class="ttl">
-        <p>BLOG</p>
+      </section>
+      <div class="btn-container">
+        <a href="#" class="btn-">制作一覧 ></a>
       </div>
-    </section>
+  <!-- Blogエリア -->
+      <section id="blog" class="l-container main-font">
+        <h2 class="ttl main-font">BLOG</h2>
+        <!-- Blog1 -->
+        <!-- Slider main container/ -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide img-size">
+            <a href="">
+                <img src="/images/blog/IMG_4710.jpg" alt="家族写真">
+                <p class="lg-ttl">aaaaaaaaaaaaaa</p>
+                <p class="sm-ttl">ssssssssssssss</p>
+            </a>
+        </div>
+        <div class="swiper-slide img-size">
+            <a href="">
+                <img src="/images/blog/IMG_4712.jpg" alt="温泉旅行">
+                <p class="lg-ttl">aaaaaaaaaaaaaa</p>
+                <p class="sm-ttl">ssssssssssssss</p>
+            </a>
+        </div>
+        <div class="swiper-slide img-size">
+            <a href="">
+                <img src="/images/blog/IMG_4713.jpg" alt="レオパ">
+                <p class="lg-ttl">aaaaaaaaaaaaaa</p>
+                <p class="sm-ttl">ssssssssssssss</p>
+            </a>
+        </div>
+        ...
+    </div>
+    <!-- If we need pagination  -->
+    <div class="swiper-pagination"></div>
 
-  </div>
+    <!-- 戻るボタン＋次ボタン -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
 </div>
-
-
-
-<!-- 
-フォルダ構成は基本今のままでいく
-/theme/ 要検討
-
-/theme/_header.scss
-/theme/_footer.scss
-/theme/_layout.scss
-/theme/_glovalnavi.scss
-/theme/_structure.scss
-/theme/_ty.scss
-/theme/color.scss
-/theme/libs/_xxxxx.scss
-/theme/page/_各ページ.scss -->
-
-<!-- <div class="p-card p-card--with-thumbnail">
-  <div class="card-thumb"><img src="/images/aaa.jpg" alt=""></div>
-  <h2 class="title-aaaa"></h2>
-  <div class="c-btn"></div>
-</div> -->
-
-<!-- .l- Layoutレイヤー
-.c- Componentレイヤー
-.p- Projectレイヤー
-.u- Utilityレイヤー
-.is- クリックなどのイベントが発生している要素に付与する
-
-命名規則はBEM -->
-
-
-<!-- <div class="block block--modifier">
-  <div class="block-element block-element--modifier">
-    <div class="">
-
+      </section>
     </div>
   </div>
+
+  <!-- ここまでコンテンツ -->
+  <!-- <a id="js-pagetop" class="pagetop" href="#js-head"><i class="fas fa-chevron-up"></i></a> -->
+
+<!-- <div class="footer-cv">
+  <div class="l-container">
+    <div class="footer-cv__left">
+      <img class="footer-cv__icon" src="/images/common/file_img.svg" alt="">
+      <h2 class="footer-cv__title">仕事に使える<span class="txt-dot">ヒ</span><span class="txt-dot">ン</span><span class="txt-dot">ト</span><span class="footer-title__min">を</span>毎週メール<span class="footer-title__min">で</span>お届け！</h2>
+      <p class="footer-cv__desc">話題事例・お役立ちデータ・セミナーまで役立つ情報を無料で入手</p>
+      <a class="cv-mail__btn" href="#">メルガマ<span>無料</span>登録 <img src="/images/common/navigate_next.png" alt=""></a>
+    </div>
+
+    <div class="footer-cv__right">
+      <div class="footer-cv__sns">
+        <p class="footer-sns__title">いつでも最新情報をみたい人は</p>
+        <div class="footer-sns__bottom">
+          <p>SNSをフォロー <span>▶︎</span></p>
+          <ul class="footer-sns__list">
+            <li><a href="#" target="_blank"><img src="/images/common/icon_twitter.png" alt="Twitter"></a></li>
+            <li><a href="#" target="_blank"><img src="/images/common/icon_fb.png" alt="facebook"></a></li>
+            <li><a href="#" target="_blank"><img src="/images/common/icon_feed.png" alt="RSS feed"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div> -->
-
-<!-- 
-.js- JavaScriptから参照される要素（スタイルは当てない）
-<p class="js-modal hogehoge is-open">OPEN <span> > </span></p>
-
-// .hogehoge {
-//   span {
-//     transition: ease 0.2s;
-//   }
-//   &.is-open {
-//     span {
-//       transform: rotate(-90deg);
-//     }
-//   }
-// }
-//
-// var
-//
-// const
-// let
-//
-//
-// function modal() {
-//   $('js-modal').on('click',function(){
-//
-//   });
-// } -->
-
-
-<!-- ここまでコンテンツ -->
-
-
 
 <footer id="footer" class="l-footer">
+  <div class="l-container">
+    <div class="footer-logo__block">
+      <div class="footer-logo">
+        <p class="tagline">STARTLINE</p>
+        <!-- <img src="/images/common/logo.svg" alt="リテールガイド"> -->
+      </div>
+      <!-- <p class="footer-logo__guide"><a href="https://locoguide.co.jp/" target="_blank"><img src="/images/common/logo_locoguide.png" alt="Powered by ロコガイド"></a></p>/ -->
+      
+    </div>
+
+    <div class="footer-navblock">
+      <ul class="footer-nav">
+        <!-- リストバージョン -->
+        <!-- <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li> -->
+        <!-- 横並び -->
+        <img src="/images/icon/facebook.svg" class="icon" alt="フェイスブック"><a href="#">Facebook</a>/<a href="#"><img src="/images/icon/instagram.svg" class="icon" alt="インスタグラム">Instagram</a>/<a href="#"><img src="/images/icon/twitter.svg" class="icon" alt="ツイッター">Twitter</a>
+      </ul>
+
+      <div class="footer-copy">
+        <p><small>Copyright © STARTLINE</small></p>
+      </div>
+
+    </div>
+  </div>
 
 </footer>
 
-
+</div>
 <!-- / l-wrapper -->
 
 <script src="//code.jquery.com/jquery-2.2.2.min.js"></script>
 <script src="/js/script.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
-</body>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+  integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </html>
 

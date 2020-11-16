@@ -10,19 +10,10 @@ li {
   padding: 0;
 }
 
-ol > li {
-  counter-increment : number;
-  position: relative;
+ol {
 
-  &:before {
-    content: counter(number) ".";
-    display: block;
-    margin-left: -1em;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 }
+
 
 
 dl {
@@ -35,10 +26,23 @@ dl {
   }
 }
 
-ol.numlist {
-  padding-left: 1.5em;
+ol.list-num {
+  padding-left: 1.2em;
   > li {
-
+    margin-bottom: 10px;
+    counter-increment : number;
+    position: relative;
+    @include min-screen($break_point_min) {
+      
+    }
+    &::before {
+      content: counter(number) ".";
+      display: block;
+      margin-left: -1em;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }
 // li > ul,

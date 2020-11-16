@@ -3,9 +3,11 @@
     display: none !important;
   }
 }
+
+
 .u-sp-hide {
   display: none !important;
-  @include min-screen($break_point_min) {
+  @include min-screen($break_point_pc) {
     display: inline !important;
   }
 }
